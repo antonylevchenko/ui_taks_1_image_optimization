@@ -1,0 +1,17 @@
+
+<div>
+    <img src="{{imagePath}}">
+</div>
+
+<div fxLayoutAlign="center start">
+    <button mat-icon-button (click)="fileInput.click()">
+        <mat-icon> add </mat-icon>
+      </button>
+      <button mat-icon-button (click)="removeImage()">
+          <mat-icon> delete </mat-icon>
+      </button>
+      <input hidden type="file" #fileInput (change)=uploadImage() accept="image/*">
+</div>
+
+
+

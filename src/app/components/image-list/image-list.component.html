@@ -1,0 +1,25 @@
+
+
+<div fxLayoutAlign="start start">
+
+
+
+  <div>
+      <div  *ngFor="let image of images" (deferLoad)="image.show = true">
+          <ng-container *ngIf="image.show">
+            <a (click)="changeImageSelection(image.name)" > <img [src]="image.url"> </a>
+          </ng-container>
+      </div>
+  </div>
+
+
+  <div  style="position: fixed; left:250px; top: 10px">
+          <app-image-view [name]="selectedImageName" (onAddingOrRemoval)="updateImagesList()"></app-image-view>
+  </div>
+
+
+
+
+
+
+</div>
